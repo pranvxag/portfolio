@@ -103,6 +103,16 @@
             font-weight: bold;
         }
 
+        .days-counter {
+            font-size: 1.2em;
+            color: #00ff88;
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 255, 136, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
         @media (max-width: 600px) {
             .contact-info {
                 grid-template-columns: 1fr;
@@ -114,7 +124,7 @@
     <div class="container">
         <header class="header">
             <h1 class="name">Pranav Gunwant Agale</h1>
-            <p class="tagline">Aspiring Student </p>
+            <p class="tagline">Aspiring Student | Future Leader</p>
         </header>
 
         <section class="section">
@@ -130,11 +140,18 @@
             </div>
             <div class="education-item">
                 <h3>Class 12</h3>
-                <p>TSBIE Board</p>
+                <p>TSBI Board</p>
             </div>
             <div class="education-item">
                 <h3>Current Status</h3>
                 <p class="status">Drop Year - Preparing for College Admissions</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Date of Birth</h2>
+            <div class="days-counter" id="daysCounter">
+                Calculating days...
             </div>
         </section>
 
@@ -145,7 +162,7 @@
                     📱 <a href="tel:8501532522" style="color: #00ff88; text-decoration: none;">8501532522</a>
                 </div>
                 <div class="contact-item">
-                    📧 <a href="mailto:agalepranav2122@gmail.com" style="color: #00ff88; text-decoration: none;">agalepranav2015@gmail.com</a>
+                    📧 <a href="mailto:agalepranav2122@gmail.com" style="color: #00ff88; text-decoration: none;">agalepranav2122@gmail.com</a>
                 </div>
             </div>
         </section>
@@ -160,5 +177,28 @@
             </div>
         </section>
     </div>
+
+    <script>
+        function calculateDays() {
+            const birthDate = new Date(2006, 2, 30); // March is month 2 (0-indexed)
+            const currentDate = new Date();
+            
+            // Normalize times to noon to avoid DST issues
+            birthDate.setHours(12, 0, 0, 0);
+            currentDate.setHours(12, 0, 0, 0);
+            
+            const timeDifference = currentDate - birthDate;
+            const daysAlive = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            
+            document.getElementById('daysCounter').innerHTML = 
+                `Number of days on this planet: <strong>${daysAlive}</strong>`;
+        }
+
+        // Initial calculation
+        calculateDays();
+        
+        // Update every 24 hours (86400000 milliseconds)
+        setInterval(calculateDays, 86400000);
+    </script>
 </body>
 </html>
