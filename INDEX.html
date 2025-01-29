@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Gunwant Agale | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .name {
+            font-size: 3.5em;
+            color: #00ff88;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #cccccc;
+            font-size: 1.2em;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            color: #00ff88;
+            margin-bottom: 20px;
+            border-left: 4px solid #00ff88;
+            padding-left: 10px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .contact-item {
+            background: rgba(0, 255, 136, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #00ff88;
+            color: #1a1a1a;
+            transform: translateY(-3px);
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .status {
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="name">Pranav Gunwant Agale</h1>
+            <p class="tagline">Aspiring Student | Future Leader</p>
+        </header>
+
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Currently in my drop year, focused on securing admission to a top-tier college. Passionate about learning and personal growth.</p>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Class 10</h3>
+                <p>New Vision Public School (CBSE)</p>
+            </div>
+            <div class="education-item">
+                <h3>Class 12</h3>
+                <p>TSBI Board</p>
+            </div>
+            <div class="education-item">
+                <h3>Current Status</h3>
+                <p class="status">Drop Year - Preparing for College Admissions</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📱 <a href="tel:8501532522" style="color: #00ff88; text-decoration: none;">8501532522</a>
+                </div>
+                <div class="contact-item">
+                    📧 <a href="mailto:agalepranav2122@gmail.com" style="color: #00ff88; text-decoration: none;">agalepranav2122@gmail.com</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Connect With Me</h2>
+            <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
